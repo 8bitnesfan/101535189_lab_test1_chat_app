@@ -1,10 +1,10 @@
 const mongoose = require("mongoose")
 
-const messageSchema = new mongoose.Schema({
-    date_sent: { type: Date, default: Date.now },
+const privateMessageSchema = new mongoose.Schema({
     from_user: String,
     to_user: String,
-    message: String
+    message: String,
+    date_sent: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model("Message", messageSchema);
+module.exports = mongoose.model("Private Message", privateMessageSchema);

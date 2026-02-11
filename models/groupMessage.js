@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
-const roomSchema = new mongoose.Schema({
-    date_sent: { type: Date, default: Date.now },
+const groupMessageSchema = new mongoose.Schema({
     from_user: String,
     room: String,
-    message: String
+    message: String,
+    date_sent: { type: Date, default: Date.now }
 });
 
 module.exports = mongoose.model("GroupMessage", groupMessageSchema);
